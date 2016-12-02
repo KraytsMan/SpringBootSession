@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Security Example </title>
+    <link rel="stylesheet" th:href="@{authorization/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{authorization/authorization.css}">
+</head>
+<body>
+<div class="container-fluid full-height centered">
+    <div class="login-container">
+        <div class="row login-image-container">
+            <img class="img-fluid img-login"
+                 th:src="@{/authorization/softjourn_logo.png}">
+        </div>
+        <form th:action="@{/login}" method="post">
+            <div class="row">
+                <div class="col-xs-12 col-lg-12">
+                    <div class="form-group row">
+                        <input class="form-control" type="text" placeholder="Enter name"
+                               id="username" name="username"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-lg-12">
+                    <div class="form-group row">
+                        <input class="form-control" type="password" placeholder="Enter password"
+                               id="password" name="password"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-lg-12 login-button-container">
+                    <input class="btn btn-default btn-lg btn-block" type="submit" value="Sign In"/>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script th:src="@{authorization/jquery.min.js}"></script>
+<script th:src="@{authorization/bootstrap.min.js}"></script>
+</body>
+</html>
